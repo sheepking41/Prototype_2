@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             // Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
 
             // Get an inactive object from the pool, then activate it, then it will MoveForward until being deactivated due to colliding with animals or hitting upper bound.
-            GameObject pooledProjectile = ObjectPooler.SharedInstance.GetPooledObject();
+            GameObject pooledProjectile = ObjectPooler.SharedInstance.GetPooledObject(); //Or can point to the GetPooledObject() of the object pooler script of SpawnManager
             if (pooledProjectile != null)
             {
                 pooledProjectile.SetActive(true); // activate it
